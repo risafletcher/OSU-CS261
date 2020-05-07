@@ -1,0 +1,36 @@
+1.  How many cost units are spent in the entire process of performing 50 consecutive push operations on an empty array which starts out at capacity 8, assuming that the array will 
+    double in capacity each time a new item is added to an already full dynamic array?
+
+    First 8 elements = 8 units of cost
+    9th element = 8 + (8 + 1) = 17 units of cost, capacity now at 16
+    10th element = 18 units
+    11th element = 19 units
+    ...
+    17th element = 25 + (16 + 1) = 42 units of cost, capacity now at 32
+    ...
+    33rd element = 58 + (32 + 1) = 91 units of cost, capacity now at 64
+    ...
+    50th element = 108 units of cost
+
+    Average: 2.16
+
+    As N (ie. the number of pushes) grows large, under this strategy for resizing, what is the average big-oh complexity for a push?
+
+    O(1)+
+
+2.  How many cost units are spent in the entire process of performing 50 consecutive push operations on an empty array which starts out at capacity 8, assuming that the array will grow 
+    by a constant 2 spaces each time a new item is added to an already full dynamic array?
+    
+    First 8 elements = 8 units of cost
+    9th element = 8 + (8 + 1) = 17 units of cost, capacity now at 10
+    10th element = 17 + 1 = 18 units
+    11th element = 18 + (10 + 1) = 29 units of cost, capacity now at 12
+    ...
+    13th element = 30 + (12 + 1) = 43 units of cost, capacity now at 14
+    ...
+    50th element  = 640 units of cost, capacity at 50
+    
+    As N (ie. the number of pushes) grows large, under this strategy for resizing, what is the 
+    average big-oh complexity for a push?
+
+    O(n)
