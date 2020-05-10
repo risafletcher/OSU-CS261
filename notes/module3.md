@@ -26,5 +26,23 @@ A queue is a data structure that imposes a **_first in, first out_** (or **_FIFO
 ### Implementing a Queue Using a Linked List
 Because we need to be able to work with both ends of a queue—enqueuing onto the back of the queue and dequeuing from the front—we must keep track of both the head and tail of the list. **_Enqueued values are inserted at the tail of the list and values are dequeued from the head_**.
 
+```python
+def insert(value, head, index):  # when inserting something not at the head 
+	new_link = Node()  # initialize a new link
+	new_link.val = value  # set new_link data
+	current = head
+	for i in range(index):
+		current = current.next
+		new_link.next = current.next
+		current.next = new_link
+```
+
+
+
+### Implementing a Queue Using a Dynamic Array
+
+When implementing a queue using a dynamic array, the front of the queue will correspond to the front of the array, and the end of the queue will correspond to the end of the array. 
+
 
 [image-1]:	https://oregonstate.instructure.com/courses/1764380/files/79236251/preview?verifier=YlkvwBCtyTf6O2TNMwwQBHBs1EQ61ctxQLgMW3EY
+
