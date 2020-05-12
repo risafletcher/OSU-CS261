@@ -8,7 +8,7 @@ Stacks are a linear ADT that imposes a **_last in, first out (LIFO)_** order on 
 - `peek()` - returns they value of the top item in the stack without removing it
 
 ### Implementing a Stack Using a Linked List
-A stack can be implemented using a singly-linked list, where the head of the list corresponds to the top of the stack. A `push` operation would push a value to the top, or “head” of the linked list. Subsequently `pop` would remove the head of the linked list.
+A stack can be implemented using a **singly-linked list**, where the head of the list corresponds to the top of the stack. A `push` operation would push a value to the top, or “head” of the linked list. Subsequently `pop` would remove the head of the linked list.
 
 ### Implementing a Stack Using a Dynamic Array
 When using a dynamic array as the underlying storage for a stack, it is easiest to use the end of the array to represent the head of the stack. This means we `push` and `pop` elements from the end of the array.
@@ -36,8 +36,6 @@ def insert(value, head, index):  # when inserting something not at the head
 		new_link.next = current.next
 		current.next = new_link
 ```
-
-
 
 ### Implementing a Queue Using a Dynamic Array
 
